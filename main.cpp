@@ -15,7 +15,7 @@ void Freq_meas()
     QueryPerformanceCounter(&cr1);
     QueryPerformanceFrequency(&fr);
     QueryPerformanceCounter(&cr2);
-    printf("\n2.1) Частота ЦП:     %u  Гц\n", fr);
+    cout << "\n2.1) Частота ЦП:     %u  Гц\n", fr;
     ans = (1000000*(double(cr2.QuadPart) - double(cr1.QuadPart)) / double(fr.QuadPart));
     cout << "2.2) Измерено за:   " << ans  << "  мкс \n";
 }
